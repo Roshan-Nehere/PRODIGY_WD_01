@@ -1,0 +1,188 @@
+/* General Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 60px; /* Adjust to account for the fixed navbar */
+  text-align: center;
+}
+
+/* Navigation Menu */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+img{
+  height: 100px;
+  
+}
+
+
+
+section h1{
+  padding: 5px;
+  display:inline-block;
+  border-radius: 10px;
+  background-color: aqua;
+}
+
+#services p{
+  font-weight: 900;
+  font-size: 50px;
+  color:#f39c12;
+}
+
+.navbar nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar nav ul li {
+  margin: 0 15px;
+}
+
+.navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  color: #f39c12;
+  background-color: rgba(255, 255, 255, 0.371);
+}
+
+/* Hamburger Menu for Mobile/Tablet */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links.active {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links li {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  padding: 0;
+}
+
+/* Section Styles */
+section {
+  padding: 250px 20px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+section h1 {
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive Design for Mobile and Tablets */
+
+/* For small screens like mobile devices */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    display: none; /* Hide the menu by default on mobile */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Reduce font size for small screens */
+    padding: 12px 30px;  /* Make links bigger for easier clicking */
+  }
+
+  section {
+    padding: 60px 20px;  /* Reduce padding for small screens */
+  }
+
+  section h1 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+}
+
+/* For medium screens like tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar nav ul {
+    display: flex;  /* Ensure the menu is horizontal on tablets */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger on tablet */
+  }
+
+  section {
+    padding: 80px 40px;  /* Add more padding for tablets */
+    
+  }
+
+  section h1 {
+    font-size: 32px;
+  }
+
+  section p {
+    font-size: 18px;
+  }
+}
